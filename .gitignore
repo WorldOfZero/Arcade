@@ -28,3 +28,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Probuilder for prototyping. A free version is available, see Probuilder Lite.
+/Assets/ProCore
