@@ -11,7 +11,7 @@ Shader "Custom/LowPolyShader" {
 		_Metallic("Metallic", Range(0,1)) = 0.0
 	}
 		SubShader{
-			Tags { "RenderType" = "Opaque" }
+			Tags { "LightMode" = "ForwardBase" "RenderType" = "Opaque" }
 			LOD 200
 
 			Pass
@@ -95,7 +95,7 @@ Shader "Custom/LowPolyShader" {
 
 			half4 frag(g2f IN) : COLOR
 			{
-				return float4(_WorldSpaceLightPos0.rgb, 1.0); // float4(IN.diffuseColor.rgb, 1.0);
+				return float4(IN.diffuseColor.rgb, 1.0);
 			}
 			ENDCG
 
